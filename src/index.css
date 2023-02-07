@@ -1,0 +1,151 @@
+:root {
+  font-family: 'Calibre', sans-serif;
+  font-weight: 400;
+
+  --main-font: 'Calibre', sans-serif;
+  --secondary-font: 'SF Mono', sans-serif;
+
+  --red: #FF1F28;
+  --dark: #0e0e0e;
+  --gray: #A0A0A0;
+  --lightGray: #3d3d3d;
+  --white: #FFFFFF;
+  --darkGray: #2e2e2e;
+
+  --gap: 50px;
+
+  --sortTransition: all .3s;
+  --longTransition: all .5s;
+
+  color-scheme: light dark;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* SCROLLBAR THUMB */
+
+::-webkit-scrollbar-thumb {
+  background: #909090;
+  background-repeat: no-repeat;
+  /* border-radius: 10px; */
+}
+
+/* SCROLLBAR TRACK */
+
+::-webkit-scrollbar-track {
+  /* background: #212123; */
+  background: transparent;
+}
+
+/* SCROLLBAR THUMB : HOVER */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #606060;
+}
+
+.primaryButton {
+  position: relative;
+  font-family: var(--secondary-font);
+  padding: 12px 20px;
+  cursor: pointer;
+  border: solid 1px var(--white);
+  border-radius: 0px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--longTransition);
+  gap: 10px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.primaryButton.active {
+  background-color: var(--red);
+  border: solid 1px var(--red);
+}
+
+.primaryButton::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #FF1F28;
+  transition: all .3s;
+  z-index: -1;
+  display: inline-block;
+}
+
+.primaryButton:hover::before {
+  width: 100%;
+}
+
+.primaryButton:hover {
+  border: solid 1px var(--red);
+}
+
+.generalIcon {
+  color: #fff !important;
+  font-size: 1rem;
+}
+
+.titleSection {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: .4rem;
+  text-align: center;
+}
+
+.outline {
+  -webkit-text-stroke: .5px var(--white);
+  color: transparent;
+  position: relative;
+  z-index: 1 !important;
+}
+
+.outline::before {
+  content: '';
+  background-color: var(--red);
+  width: 100%;
+  height: 6px;
+  position: absolute;
+  bottom: 16px;
+  right: 0;
+  z-index: -1 !important;
+}
+
+.subTitle {
+  font-family: 'SF Mono', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: var(--gray);
+  /* margin-bottom: .2rem; */
+  margin-bottom: 0;
+  text-align: center;
+  line-height: 1.25rem;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--gray);
+  margin-bottom: 2rem;
+}

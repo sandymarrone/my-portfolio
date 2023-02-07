@@ -1,0 +1,32 @@
+.containerApp {
+  height: 100%;
+  width: 100%;
+  background-color: var(--dark);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .content {
+  padding: 0 9rem 1rem 9rem;
+} */
+
+.rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3%;
+  height: 100vh;
+  background-color: var(--red);
+  z-index: -1;
+}
+
+/* .spray {
+  position: absolute;
+  z-index: 0;
+  top: -100px;
+  left: -90px;
+  width: 300px;
+} */

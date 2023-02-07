@@ -1,0 +1,59 @@
+.section-proyectos {
+  width: 100%;
+  height: fit-content;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 6rem;
+}
+
+.containerButtons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.btnFiltroProyectos {
+  border: none;
+  padding: 10px 25px;
+  cursor: pointer;
+  background-color: transparent;
+  position: relative;
+  color: var(--gray);
+  font-size: 1rem;
+  font-family: var(--secondary-font);
+  font-weight: 300;
+}
+
+.btnFiltroProyectos.active {
+  color: var(--red);
+  box-shadow: none;
+}
+
+.btnFiltroProyectos.active::after {
+  content: '';
+  position: absolute;
+  left: calc(50% - 25px);
+  display: block;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--red);
+  transition: width .2s;
+}
+
+/* -----------   PROJECTS   --------------- */
+
+.containerGridProjects {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 25px;
+  justify-content: center;
+  list-style: none;
+}
