@@ -38,7 +38,7 @@ function Footer() {
             <BsGithub style={{ fontSize: '1.2rem' }} />
           </a>
           <a
-            href="#"
+            href="https://www.behance.net/sandymarrone"
             className="footer__link"
             target="_blank"
             rel="noopener noreferrer"

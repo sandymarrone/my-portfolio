@@ -65,6 +65,31 @@
   padding: 20px 10px;
 }
 
+.navbar__phone {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  font-family: var(--secondary-font);
+  font-size: 14px;
+}
+
+.navbar__phone::after {
+  content: '';
+  position: absolute;
+  left: calc(22%);
+  top: 22px;
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--red);
+  transition: width .2s;
+}
+
+.navbar__phone:hover::after {
+  width: 70%;
+}
+
 /* ------------------------------ */
 
 .navbar__switch {

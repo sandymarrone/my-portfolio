@@ -21,16 +21,14 @@ function About() {
           </h2>
 
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum,
-            corrupti expedita quibusdam natus provident, a illo quas amet atque
-            sint iste, quis reprehenderit consequatur voluptate error tempore.
-            <br />
-            <br />
-            Vitae, velit veritatis? Sit, doloremque nulla! Doloremque numquam
-            tempora quae id? Officiis, modi repellendus! Dolor sit amet
-            consectetur adipisicing elit. Harum, corrupti expedita quibusdam
-            natus provident, a illo quas amet atque sint iste, quis
-            reprehenderit consequatur voluptate error tempore
+            Soy diseñador gráfico freelancer desde 2017 y desarrollador de
+            aplicaciones web desde 2020, con experiencia en la creación de
+            soluciones innovadoras y atractivas para la web y la publicidad.
+          </p>
+
+          <p>
+            En búsqueda de unir mi pasión por la tecnología y el arte para
+            ayudar a las empresas a alcanzar sus objetivos de negocio.
           </p>
 
           <button className="primaryButton">

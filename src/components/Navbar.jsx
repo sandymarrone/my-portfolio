@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import '../components/Navbar.css';
 import Logo from '../assets/img/logo.png';
 import { BsMoon } from 'react-icons/bs';
+import { BsTelephoneFill } from 'react-icons/bs';
 // import { IoMoonOutline } from 'react-icons/md';
 
 function Navbar() {
@@ -43,7 +44,9 @@ function Navbar() {
         ubicacionNav ? 'navbar--hide' : navbar ? 'navbar--active' : ''
       }`}
     >
-      <img className="navbar__logo" src={Logo} alt="Logo Sandy Marrone" />
+      <a href="#">
+        <img className="navbar__logo" src={Logo} alt="Logo Sandy Marrone" />
+      </a>
 
       <ul className="navbar__menu">
         <li className="navbar__item">
@@ -63,13 +66,19 @@ function Navbar() {
         </li>
       </ul>
 
-      <div className="navbar__switch">
+      <div className="navbar__phone">
+        <a className="navbar__link" href="#">
+          <BsTelephoneFill /> +58 412 8684096
+        </a>
+      </div>
+
+      {/* <div className="navbar__switch">
         <BsMoon className="generalIcon" style={{ fontSize: '1.2rem' }} />
         <label className="switch">
           <input type="checkbox"></input>
           <span className="slider__switch round"></span>
         </label>
-      </div>
+      </div> */}
     </nav>
   );
 }

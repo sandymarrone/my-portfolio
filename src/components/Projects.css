@@ -9,24 +9,19 @@
   /* padding: 60px 3rem; */
 }
 
-.projects__buttons {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  position: relative;
-  z-index: 1;
+.fade-enter{
+  opacity: 0;
 }
-
-/* -----------   PROJECTS   --------------- */
-
-.projects__grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 430px);
-  gap: var(--gap);
-  justify-content: center;
-  list-style: none;
+.fade-exit{
+  opacity: 1;
+}
+.fade-enter-active{
+  opacity: 1;
+}
+.fade-exit-active{
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-exit-active{
+  transition: opacity 300ms;
 }
