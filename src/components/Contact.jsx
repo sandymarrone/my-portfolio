@@ -52,7 +52,7 @@ export default function Contact() {
         <span className="titleSection__outline outline">juntos</span>
       </h3>
       <p className="contact__textInfo">
-        Completa este <span>formulario</span> o comunícate conmigo directamente:{' '}
+        Completa este formulario o comunícate conmigo directamente:{' '}
         <button
           className="contact__mail"
           onClick={() => navigator.clipboard.writeText(mail)}

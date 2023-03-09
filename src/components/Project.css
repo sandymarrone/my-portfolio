@@ -3,7 +3,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 550px;
+  height: 400px;
   position: relative;
   overflow: hidden;
   z-index: 0;
@@ -13,7 +13,7 @@
 .projects__grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 430px);
+  grid-template-columns: repeat(auto-fill, 1000px);
   gap: var(--gap);
   justify-content: center;
   list-style: none;
@@ -21,39 +21,40 @@
 
 .project__info {
   /* background-color: rgba(14, 14, 14, .85); */
-  width: 100%;
-  height: fit-content;
+  width: 50%;
+  height: 100%;
   /* background-image: linear-gradient(to top, rgba(14, 14, 14, .8) 20%, rgba(14, 14, 14, .5) 75%, rgba(14, 14, 14, .2) 85%, transparent 100%); */
-  background-image: linear-gradient(to top, rgba(14, 14, 14, 1) 20%, rgba(14, 14, 14, .95) 75%, rgba(14, 14, 14, .85) 85%, transparent 100%);
+  background-image: linear-gradient(to right, rgba(14, 14, 14, 1) 20%, rgba(14, 14, 14, .95) 65%, rgba(14, 14, 14, .85) 75%, transparent 100%);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-start;
   position: absolute;
-  bottom: -29%;
+  left: 0;
   /* bottom: -100%; */
   transition: all .3s;
   /* backdrop-filter: blur(5px); */
-  padding: 3rem 1rem 1rem 1rem;
+  padding: 1rem 6rem 0rem 3rem;
   /* border-top: 1px solid rgba(255, 255, 255, .05); */
   z-index: 1;
 }
 
-.project:hover .project__info {
-  bottom: -1%;
-}
+/* .project:hover .project__info {
+  left: -1%;
+} */
 
 .project__type {
   font-size: .8rem;
   /* background-color: var(--red); */
   padding: 1px 4px;
   font-family: var(--secondary-font);
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 }
 
 .project__title {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 600;
+  margin-bottom: .2rem;
 }
 
 .project__textInfo {
@@ -107,18 +108,18 @@
 }
 
 .project__element {
-  width: 250px;
+  width: 200px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 10%;
+  right: 15%;
+  /* transform: translate(-50%, -50%); */
   transition: all .3s;
   filter: drop-shadow(20px 30px 15px rgba(0, 0, 0, 0.7));
 }
 
 .project:hover .project__element{
-  width: 320px;
-  top: 48%;
-  left: 45%;
+  width: 220px;
+  /* top: 0; */
+  /* right: 5%; */
   filter: drop-shadow(30px 30px 30px rgba(0, 0, 0, 0.5));
 }

@@ -1,12 +1,13 @@
 const data = [
   {
     id: 1,
-    image: 'portada-octopus.png',
+    image: 'background-red.png',
     type: 'Diseño para Redes Sociales',
     typeColor: '#9e0404',
     title: 'Octopus English Course',
     category: 'Diseño Gráfico',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     tools: ['Photoshop', 'Illustrator'],
     // element: 'phone.png',
     icons: [
@@ -19,12 +20,13 @@ const data = [
   },
   {
     id: 2,
-    image: 'portada2.png',
+    image: 'background-pink2.png',
     type: 'Diseño para Redes Sociales',
     typeColor: '#ff0e81',
     title: 'Katiuska Villamizar',
     category: 'Diseño Gráfico',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     tools: ['Photoshop'],
     // element: 'phone.png',
     icons: [
@@ -36,14 +38,15 @@ const data = [
   },
   {
     id: 3,
-    image: 'project2.png',
+    image: 'background-yellow.png',
     type: 'Diseño para Redes Sociales',
-    typeColor: '#ff0305',
+    typeColor: '#c68718',
     title: 'Mr. Monkey',
     category: 'Diseño Gráfico',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     tools: ['Photoshop'],
-    element: 'phone.png',
+    // element: 'phone.png',
     icons: [
       // { iconName: 'ExternalLink', link: 'https://www.google.com/' },
       {
@@ -54,47 +57,17 @@ const data = [
   },
   {
     id: 4,
-    image: 'project2.png',
+    image: 'background-stier.png',
     type: 'Desarrollo Web',
-    typeColor: 'var(--red)',
+    typeColor: '#28a745',
     title: 'Sistema Stier',
     category: 'Web',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     tools: ['Photoshop'],
-    element: 'phone.png',
+    // element: 'phone.png',
     icons: [
-      { iconName: 'ExternalLink', link: 'https://www.google.com/' },
-      { iconName: 'Behance', link: 'https://www.behance.net/samcgraphics' },
-    ],
-  },
-  {
-    id: 5,
-    image: 'project.png',
-    type: 'Diseño para Redes Sociales',
-    typeColor: 'var(--red)',
-    title: 'Comida Rápida',
-    category: 'Diseño Gráfico',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    tools: ['Photoshop'],
-    element: 'phone.png',
-    icons: [
-      { iconName: 'ExternalLink', link: 'https://www.google.com/' },
-      { iconName: 'Behance', link: 'https://www.behance.net/samcgraphics' },
-    ],
-  },
-  {
-    id: 6,
-    image: 'project2.png',
-    type: 'Diseño para Redes Sociales',
-    typeColor: 'var(--red)',
-    title: 'Comida Rápida',
-    category: 'Diseño Gráfico',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    tools: ['Photoshop', 'Illustrator'],
-    element: 'phone.png',
-    icons: [
-      { iconName: 'ExternalLink', link: 'https://www.google.com/' },
-      { iconName: 'Behance', link: 'https://www.behance.net/samcgraphics' },
+      { iconName: 'Behance', link: 'https://www.behance.net/sandymarrone' },
     ],
   },
 ];
