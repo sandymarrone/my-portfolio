@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../components/Navbar.css';
-import Logo from '../assets/img/logo.png';
+import Logo from '../assets/img/logo-samcreative.svg';
+import { BsWhatsapp } from 'react-icons/bs';
 import { BsMoon } from 'react-icons/bs';
 import { BsTelephoneFill } from 'react-icons/bs';
 // import { IoMoonOutline } from 'react-icons/md';
@@ -66,11 +67,15 @@ function Navbar() {
         </li>
       </ul>
 
-      <div className="navbar__phone">
+      <button className="navbar__navBtn">
+        <BsWhatsapp className="navBtn__icon" /> Hablemos
+      </button>
+
+      {/* <div className="navbar__phone">
         <a className="navbar__link" href="#">
           <BsTelephoneFill /> +58 412 8684096
         </a>
-      </div>
+      </div> */}
 
       {/* <div className="navbar__switch">
         <BsMoon className="generalIcon" style={{ fontSize: '1.2rem' }} />

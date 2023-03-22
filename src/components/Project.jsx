@@ -25,7 +25,10 @@ function ProyectoIndividual({ projects }) {
               <div className="project__info">
                 <span
                   className="project__type"
-                  style={{ backgroundColor: `${project.typeColor}` }}
+                  style={{
+                    backgroundColor: `${project.typeColor}`,
+                    color: `${project.typeColorFont}`,
+                  }}
                 >
                   {project.type}
                 </span>
@@ -35,7 +38,9 @@ function ProyectoIndividual({ projects }) {
                   className="project__toolsTitle"
                   style={{ borderBottom: `solid 2px ${project.typeColor}` }}
                 >
-                  Herramientas
+                  {project.category == 'Diseño Gráfico'
+                    ? 'Herramientas'
+                    : 'Lenguajes'}
                 </span>
                 <ul className="project__tools tools">
                   {/* {project.tools.map((tool) => {
