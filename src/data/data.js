@@ -21,7 +21,7 @@ const data = [
   },
   {
     id: 2,
-    image: 'portada2.png',
+    image: 'portada-katiuska.png',
     type: 'Diseño para Redes Sociales',
     typeColor: '#ff0e81',
     typeColorFont: '#fff',
