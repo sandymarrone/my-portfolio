@@ -9,9 +9,10 @@
   align-items: center;
 }
 
-/* .content {
-  padding: 0 9rem 1rem 9rem;
-} */
+.content {
+  /* padding: 0 9rem 1rem 9rem; */
+  width: 100%;
+}
 
 .rectangle {
   position: absolute;

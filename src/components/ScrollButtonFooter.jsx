@@ -12,9 +12,13 @@ function ScrollButtonFooter() {
 
   return (
     <>
-      <button className={'scrollButtonFooter'} onClick={scrollToTop}>
+      <button className="scrollButtonFooter" onClick={scrollToTop}>
+        <span className="scrollButtonFooter__text">Volver arriba</span>
         <FiChevronUp className="scrollButton__icon" />
       </button>
+      {/* <button className={'scrollButtonFooter'} onClick={scrollToTop}>
+        <FiChevronUp className="scrollButton__icon" />
+      </button> */}
     </>
   );
 }

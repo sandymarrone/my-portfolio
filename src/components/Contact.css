@@ -1,5 +1,5 @@
 .contact {
-  padding: 60px 0;
+  padding: 60px 10rem;
   /* padding: 60px 3rem; */
   width: 100%;
   display: flex;
@@ -199,4 +199,10 @@
   display: flex;
   flex-direction: column;
   margin: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact {
+    padding: 60px 3rem;
+  }
 }

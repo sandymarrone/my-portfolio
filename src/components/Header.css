@@ -115,3 +115,10 @@
 		top: 25px;
 	}
 }
+
+
+@media screen and (max-width: 1200px) {
+  .header__info {
+    padding: 0 3rem 1rem 3rem;
+  }
+}

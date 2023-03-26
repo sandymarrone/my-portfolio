@@ -1,12 +1,13 @@
 .projects {
-  /* width: 100%; */
-  max-width: 1000px;
+  width: 100% !important;
+  /* max-width: 1000px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px 0;
+  padding: 60px 10rem;
   /* padding: 60px 3rem; */
+  /* background-color: aqua; */
 }
 
 .fade-enter{
@@ -24,4 +25,10 @@
 .fade-enter-active,
 .fade-exit-active{
   transition: opacity 300ms;
+}
+
+@media screen and (max-width: 1200px) {
+  .projects {
+    padding: 60px 3rem;
+  }
 }

@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react';
 import '../components/Navbar.css';
 import Logo from '../assets/img/logo-samcreative.svg';
 import { BsWhatsapp } from 'react-icons/bs';
-import { BsMoon } from 'react-icons/bs';
-import { BsTelephoneFill } from 'react-icons/bs';
-// import { IoMoonOutline } from 'react-icons/md';
+import { BsList } from 'react-icons/bs';
 
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
@@ -45,7 +43,12 @@ function Navbar() {
         ubicacionNav ? 'navbar--hide' : navbar ? 'navbar--active' : ''
       }`}
     >
-      <a href="#">
+      <a
+        style={{
+          lineHeight: '0px',
+        }}
+        href="#"
+      >
         <img className="navbar__logo" src={Logo} alt="Logo Sandy Marrone" />
       </a>
 

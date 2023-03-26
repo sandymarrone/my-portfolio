@@ -1,12 +1,13 @@
 .about {
-  padding: 60px 0;
-  max-width: 1000px;
+  padding: 60px 10rem;
+  /* max-width: 1000px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   color: var(--white);
   /* position: relative; */
   margin-top: 30px;
+  /* background-color: #161616; */
 }
 
 .about__container {
@@ -28,11 +29,17 @@
 }
 
 .about__img img {
-  width: 400px;
+  width: 500px;
   padding: 1rem 2rem 0 2rem;
   background-color: var(--red);
 }
 
 .about__info {
   width: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  .about {
+    padding: 60px 3rem;
+  }
 }
