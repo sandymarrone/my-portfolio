@@ -1,12 +1,17 @@
 import { useState, useEffect } from 'react';
 import '../components/Navbar.css';
 import Logo from '../assets/img/logo-samcreative.svg';
-import { BsWhatsapp } from 'react-icons/bs';
-import { BsList } from 'react-icons/bs';
+import Logoletras from '../assets/img/letras-samcreative.svg';
+import { BsWhatsapp, BsList, BsX } from 'react-icons/bs';
 
 function Navbar() {
+  const [active, setActive] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const [ubicacionNav, setUbicacionNav] = useState(false);
+
+  const toggleMenu = () => {
+    setActive(!active);
+  };
 
   let lastScrollY = window.scrollY;
 
@@ -52,19 +57,23 @@ function Navbar() {
         <img className="navbar__logo" src={Logo} alt="Logo Sandy Marrone" />
       </a>
 
-      <ul className="navbar__menu">
+      <ul className={`navbar__menu menu ${active ? 'menu__active' : ''}`}>
+        <button className="menu__close close" onClick={toggleMenu}>
+          <BsX className="close__icon" />
+        </button>
+        <img className="menu__logo" src={Logoletras} alt="Logo Sandy Marrone" />
         <li className="navbar__item">
-          <a className="navbar__link" href="#about">
+          <a className="navbar__link" href="#about" onClick={toggleMenu}>
             Sobre mi
           </a>
         </li>
         <li className="navbar__item">
-          <a className="navbar__link" href="#projects">
+          <a className="navbar__link" href="#projects" onClick={toggleMenu}>
             Proyectos
           </a>
         </li>
         <li className="navbar__item">
-          <a className="navbar__link" href="#contact">
+          <a className="navbar__link" href="#contact" onClick={toggleMenu}>
             Contacto
           </a>
         </li>
@@ -74,19 +83,9 @@ function Navbar() {
         <BsWhatsapp className="navBtn__icon" /> Hablemos
       </button>
 
-      {/* <div className="navbar__phone">
-        <a className="navbar__link" href="#">
-          <BsTelephoneFill /> +58 412 8684096
-        </a>
-      </div> */}
-
-      {/* <div className="navbar__switch">
-        <BsMoon className="generalIcon" style={{ fontSize: '1.2rem' }} />
-        <label className="switch">
-          <input type="checkbox"></input>
-          <span className="slider__switch round"></span>
-        </label>
-      </div> */}
+      <button className="navbar__menuBtn" onClick={toggleMenu}>
+        <BsList />
+      </button>
     </nav>
   );
 }

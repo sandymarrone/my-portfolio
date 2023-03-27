@@ -33,11 +33,16 @@ function ProyectoIndividual({ projects }) {
               //   backgroundImage: `url(../src/assets/img/${project.image})`,
               // }}
             >
-              <img
-                className="project__background"
-                src={`../src/assets/img/${project.image}`}
-                alt=""
-              />
+              <picture className="project__background">
+                <source
+                  srcSet={`../src/assets/img/${project.imageMobile}`}
+                  media="(max-width: 576px)"
+                />
+                <img
+                  src={`../src/assets/img/${project.image}`}
+                  alt="Imagen de proyecto"
+                />
+              </picture>
               <div className="project__blur--hover"></div>
               <div className="project__info">
                 <span

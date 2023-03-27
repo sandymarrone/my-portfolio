@@ -10,6 +10,7 @@
 
 .contact__textInfo {
   margin-bottom: 3rem;
+  text-align: center;
 }
 
 .contact__textInfo > span {
@@ -132,7 +133,7 @@
   margin: 0 auto;
   position: relative;
   font-family: var(--secondary-font);
-  padding: 13px 12px;
+  padding: 12px 12px;
   cursor: pointer;
   border: solid 1px var(--white);
   border-radius: 0px;
@@ -176,7 +177,6 @@
   border: solid 1px var(--darkGray);
   flex: 1;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
 }
@@ -186,10 +186,6 @@
   font-family: var(--secondary-font);
   margin-bottom: .2rem;
 }
-
-/* .extraInfo__container > p {
-  margin: 0;
-} */
 
 .extraInfo__container_info > p {
   margin: 0;
@@ -204,5 +200,39 @@
 @media screen and (max-width: 1200px) {
   .contact {
     padding: 60px 3rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .form__inputGroup {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact__formContainer {
+    width: 100%;
+  }
+
+  .form__inputGroup {
+    gap: 2rem;
+  }
+  
+}
+
+@media screen and (max-width: 576px) {
+  .contact {
+    padding: 60px 1rem;
+  }
+
+  .contact__textInfo {
+    font-size: 1.1rem;
+  }
+
+  .contact__mail {
+    font-size: 1.1rem;
+  }
+
+  .form__button {
+    width: 100%;
   }
 }

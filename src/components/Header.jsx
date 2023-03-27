@@ -1,6 +1,5 @@
 import './Header.css';
 import miFoto from '../assets/img/pp.jpg';
-import SocialFixed from './SocialFixed';
 import ScrollButton from './ScrollButton';
 
 function Header() {

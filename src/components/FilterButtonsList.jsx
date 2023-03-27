@@ -11,7 +11,7 @@ export const FilterButtonsList = ({
       {categories.map((category) => {
         return (
           <button
-            className={`primaryButton ${
+            className={`filterButton ${
               activeButton === category ? 'active' : ''
             }`}
             onClick={() => filterCategory(category)}

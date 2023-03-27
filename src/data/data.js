@@ -1,7 +1,8 @@
 const data = [
   {
     id: 1,
-    image: 'portada-mrmonkey2.png',
+    image: 'portada-mrmonkey.png',
+    imageMobile: 'portada-mrmonkey-mobile.png',
     type: 'Diseño para Redes Sociales',
     typeColor: '#f7ba00',
     // typeColor: '#c68718',
@@ -28,6 +29,7 @@ const data = [
   {
     id: 2,
     image: 'portada-katiuska.png',
+    imageMobile: 'portada-katiuska-mobile.png',
     type: 'Diseño para Redes Sociales',
     typeColor: '#ff0e81',
     typeColorFont: '#fff',
@@ -52,6 +54,7 @@ const data = [
   {
     id: 3,
     image: 'portada-octopus.png',
+    imageMobile: 'portada-octopus-mobile.png',
     type: 'Diseño para Redes Sociales',
     typeColor: '#9e0404',
     typeColorFont: '#fff',
@@ -80,6 +83,7 @@ const data = [
   {
     id: 4,
     image: 'portada-stier.png',
+    imageMobile: 'portada-stier-mobile.png',
     type: 'Desarrollo Web',
     typeColor: '#178530',
     typeColorFont: '#fff',

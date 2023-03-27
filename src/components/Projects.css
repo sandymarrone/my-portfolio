@@ -32,3 +32,22 @@
     padding: 60px 3rem;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .titleSection {
+    font-size: 3.5rem !important;
+    line-height: 3.1rem;
+  }
+
+  .subTitle {
+    margin-bottom: .8rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .projects {
+    padding: 60px 1rem;
+  }
+}

@@ -37,14 +37,12 @@
 .scrollButtonFooter__text {
   font-family: var(--secondary-font);
   display: none;
-  /* opacity: 0; */
   transition: all .5s linear;
   white-space: pre;
 }
 
 .scrollButtonFooter:hover > .scrollButtonFooter__text {
   display: block;
-  /* opacity: 1; */
 }
 
 .scrollButton__icon {
@@ -66,4 +64,20 @@
 @keyframes scrollButton__icon {
   0% {transform: translateY(-2px);}
   50% {transform: translateY(3px);}
+}
+
+@media screen and (max-width: 576px) {
+  .scrollButtonFooter {
+    width: 140px;
+    height: 30px;
+  }
+
+  .scrollButtonFooter:hover {
+    width: 140px;
+  }
+
+  .scrollButtonFooter__text {
+    font-size: .65rem;
+    display: block;
+  }
 }

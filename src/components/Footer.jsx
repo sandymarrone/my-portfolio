@@ -30,7 +30,7 @@ function Footer() {
             rel="noopener noreferrer"
             title="Instagram"
           >
-            <BsInstagram style={{ fontSize: '1.5rem' }} />
+            <BsInstagram className="footer__icon" />
           </a>
           <a
             href="https://github.com/sandymarrone"
@@ -39,7 +39,7 @@ function Footer() {
             rel="noopener noreferrer"
             title="Github"
           >
-            <BsGithub style={{ fontSize: '1.5rem' }} />
+            <BsGithub className="footer__icon" />
           </a>
           <a
             href="https://www.behance.net/sandymarrone"
@@ -48,7 +48,7 @@ function Footer() {
             rel="noopener noreferrer"
             title="Behance"
           >
-            <BsBehance style={{ fontSize: '1.5rem' }} />
+            <BsBehance className="footer__icon" />
           </a>
           <a
             href="#"
@@ -57,7 +57,7 @@ function Footer() {
             rel="noopener noreferrer"
             title="LinkedIn"
           >
-            <FaLinkedinIn style={{ fontSize: '1.5rem' }} />
+            <FaLinkedinIn className="footer__icon" />
           </a>
           <a
             href="#"
@@ -66,7 +66,7 @@ function Footer() {
             rel="noopener noreferrer"
             title="Whatsapp"
           >
-            <BsWhatsapp style={{ fontSize: '1.5rem' }} />
+            <BsWhatsapp className="footer__icon" />
           </a>
         </div>
         <ScrollButtonFooter />
@@ -74,9 +74,7 @@ function Footer() {
 
       <div className="copyright-container copyright">
         <img className="copyright__logo" src={Logo} alt="Logo Sandy Marrone" />
-        <span>
-          Copyright © 2023 Sandy Marrone. Todos los derechos reservados
-        </span>
+        <span>Copyright © 2023 Sandy Marrone</span>
       </div>
     </footer>
   );

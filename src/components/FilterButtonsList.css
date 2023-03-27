@@ -8,3 +8,61 @@
   position: relative;
   z-index: 1;
 }
+
+.filterButton {
+  position: relative;
+  font-family: var(--secondary-font);
+  padding: 12px 20px;
+  cursor: pointer;
+  border: solid 1px var(--white);
+  border-radius: 0px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--longTransition);
+  gap: 10px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.filterButton.active {
+  border: solid 1px var(--red);
+}
+
+.filterButton.active::before {
+  width: 100%;
+}
+
+.filterButton::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #FF1F28;
+  transition: all .3s;
+  z-index: -1;
+  display: inline-block;
+}
+
+.filterButton:hover::before {
+  width: 100%;
+}
+
+.filterButton:hover {
+  border: solid 1px var(--red);
+}
+
+@media screen and (max-width: 450px) {
+  .projects__buttons {
+    gap: 1rem;
+  }
+
+  .filterButton {
+    padding: 12px 20px;
+    font-size: .7rem;
+    gap: 10px;
+  }
+}
