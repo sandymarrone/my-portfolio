@@ -1,20 +1,29 @@
+import projectImage1 from '../assets/img/portada-mrmonkey.png';
+import projectImageMobile1 from '../assets/img/portada-mrmonkey-mobile.png';
+
+import projectImage2 from '../assets/img/portada-katiuska.png';
+import projectImageMobile2 from '../assets/img/portada-katiuska-mobile.png';
+
+import projectImage3 from '../assets/img/portada-octopus.png';
+import projectImageMobile3 from '../assets/img/portada-octopus-mobile.png';
+
+import projectImage4 from '../assets/img/portada-stier.png';
+import projectImageMobile4 from '../assets/img/portada-stier-mobile.png';
+
 const data = [
   {
     id: 1,
-    image: 'portada-mrmonkey.png',
-    imageMobile: 'portada-mrmonkey-mobile.png',
+    image: projectImage1,
+    imageMobile: projectImageMobile1,
     type: 'Diseño para Redes Sociales',
     typeColor: '#f7ba00',
-    // typeColor: '#c68718',
     typeColorFont: '#000',
     title: 'Mr. Monkey',
     category: 'Diseño Gráfico',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     tools: ['Photoshop'],
-    // element: 'phone.png',
     icons: [
-      // { iconName: 'ExternalLink', link: 'https://www.google.com/' },
       {
         iconName: 'Behance',
         link: 'https://www.behance.net/gallery/163976299/Social-Media-Fast-Food',
@@ -28,8 +37,8 @@ const data = [
   },
   {
     id: 2,
-    image: 'portada-katiuska.png',
-    imageMobile: 'portada-katiuska-mobile.png',
+    image: projectImage2,
+    imageMobile: projectImageMobile2,
     type: 'Diseño para Redes Sociales',
     typeColor: '#ff0e81',
     typeColorFont: '#fff',
@@ -38,7 +47,6 @@ const data = [
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     tools: ['Photoshop'],
-    // element: 'elemento-katiuska.png',
     icons: [
       {
         iconName: 'Behance',
@@ -53,8 +61,8 @@ const data = [
   },
   {
     id: 3,
-    image: 'portada-octopus.png',
-    imageMobile: 'portada-octopus-mobile.png',
+    image: projectImage3,
+    imageMobile: projectImageMobile3,
     type: 'Diseño para Redes Sociales',
     typeColor: '#9e0404',
     typeColorFont: '#fff',
@@ -63,9 +71,7 @@ const data = [
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     tools: ['Photoshop', 'Illustrator'],
-    // element: 'phone.png',
     icons: [
-      // { iconName: 'ExternalLink', link: 'https://www.google.com/' },
       {
         iconName: 'Behance',
         link: 'https://www.behance.net/gallery/164025573/Social-Media-English-Course',
@@ -82,8 +88,8 @@ const data = [
   },
   {
     id: 4,
-    image: 'portada-stier.png',
-    imageMobile: 'portada-stier-mobile.png',
+    image: projectImage4,
+    imageMobile: projectImageMobile4,
     type: 'Desarrollo Web',
     typeColor: '#178530',
     typeColorFont: '#fff',
@@ -92,7 +98,6 @@ const data = [
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     tools: ['JavaScript', 'PHP', 'SQL'],
-    // element: 'phone.png',
     icons: [
       {
         iconName: 'ExternalLink',

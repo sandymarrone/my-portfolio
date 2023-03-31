@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 100vh;
   position: relative;
   z-index: 1;
 }
@@ -73,8 +73,7 @@
 
 .header__scrollAnimation {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 49.5%;
   top: 100%;
   transform: translateY(-150%);
 }
@@ -125,7 +124,9 @@
 @media screen and (max-width: 992px) {
   .header {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
+    height: calc(100vh - 80px);
+    margin-top: 60px;
     position: relative;
     z-index: 1;
   }
@@ -144,6 +145,12 @@
     margin-bottom: 0rem;
     padding: 0 1rem;
     line-height: 24px;
+  }
+
+  .header__scrollAnimation {
+    left: 48%;
+    top: 100%;
+    transform: translateY(-150%);
   }
 }
 
@@ -167,5 +174,77 @@
     margin-bottom: 0rem;
     padding: 0 3.5rem;
     line-height: 20px;
+  }
+
+  .header__scrollAnimation {
+    left: 45%;
+    top: 100%;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) and (max-height: 670px) {
+  .header__img {
+    width: 120px;
+    margin-bottom: 1.2rem;
+  }
+
+  .header__title {
+    font-size: 2.3rem;
+    line-height: 32px;
+  }
+
+  .header__info p {
+    font-size: .8rem;
+    width: 350px;
+    line-height: 16px;
+  }
+
+  .header__title span::before {
+    height: 3px;
+    bottom: 12px;
+  }
+
+  .scrollAnimation__wheel {
+    width: 15px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 60px;
+    position: relative;
+  }
+  
+  .scrollAnimation__wheel::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 2s infinite;
+    -webkit-animation: wheel 2s infinite;
+  }
+
+  @keyframes wheel {
+    to {
+      opacity: 0;
+      top: 20px;
+    }
+  }
+  
+  @-webkit-keyframes wheel {
+    to {
+      opacity: 0;
+      top: 20px;
+    }
+  }
+}
+
+@media screen and (max-height: 480px) {
+  .header__scrollAnimation {
+    display: none;
   }
 }

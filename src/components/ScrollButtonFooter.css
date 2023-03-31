@@ -49,6 +49,7 @@
   transition: all .2s;
   font-size: 1.3rem;
   color: var(--white);
+  stroke: #fff;
   transform: translateY(-1px);
 }
 
@@ -58,12 +59,12 @@
 }
 
 .scrollButtonFooter:hover .scrollButton__icon {
-  animation: scrollButton__icon infinite alternate-reverse .8s;
+  animation: scrollButton__icon infinite alternate-reverse 1.2s;
 }
 
 @keyframes scrollButton__icon {
-  0% {transform: translateY(-2px);}
-  50% {transform: translateY(3px);}
+  0% {transform: translateY(-1px);}
+  50% {transform: translateY(1px);}
 }
 
 @media screen and (max-width: 576px) {
@@ -79,5 +80,14 @@
   .scrollButtonFooter__text {
     font-size: .65rem;
     display: block;
+  }
+
+  @keyframes scrollButton__icon {
+    0% {transform: translateY(-1px);}
+    50% {transform: translateY(1px);}
+  }
+
+  .scrollButton__icon {
+    animation: scrollButton__icon infinite alternate-reverse 1.5s;
   }
 }

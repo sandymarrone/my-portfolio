@@ -1,22 +1,36 @@
 import './Project.css';
-import { RiExternalLinkLine } from 'react-icons/ri';
-import { BsGithub, BsBehance } from 'react-icons/bs';
+import { useState } from 'react';
 import { IoLogoJavascript } from 'react-icons/io';
 import { AiOutlineConsoleSql } from 'react-icons/ai';
 import { FaPhp } from 'react-icons/fa';
-import {
-  SiPhp,
-  SiMysql,
-  SiAdobephotoshop,
-  SiAdobeillustrator,
-} from 'react-icons/si';
 import { DiPhotoshop, DiIllustrator } from 'react-icons/di';
-import { CSSTransition, SwitchTransition } from 'react-transition-group';
-import { AiOutlineCalendar } from 'react-icons/ai';
+import {
+  CSSTransition,
+  SwitchTransition,
+  TransitionGroup,
+} from 'react-transition-group';
+import ProjectInfo from './ProjectInfo';
 
 function ProyectoIndividual({ projects }) {
+  const [mostrarComponente, setMostrarComponente] = useState(false);
+
+  const mostrarComponenteHandler = () => {
+    setMostrarComponente(true);
+  };
+
+  const cerrarComponenteHandler = () => {
+    setMostrarComponente(false);
+  };
+
   return (
     <ul className="projects__grid">
+      {/* <TransitionGroup> */}
+      {mostrarComponente && (
+        // <CSSTransition classNames="fade" timeout={600}>
+        <ProjectInfo onClose={cerrarComponenteHandler} />
+        // </CSSTransition>
+      )}
+      {/* </TransitionGroup> */}
       {projects.map((project) => (
         <SwitchTransition>
           <CSSTransition
@@ -26,22 +40,13 @@ function ProyectoIndividual({ projects }) {
             }
             classNames="fade"
           >
-            <li
-              className="project"
-              key={project.id}
-              // style={{
-              //   backgroundImage: `url(../src/assets/img/${project.image})`,
-              // }}
-            >
+            <li className="project" key={project.id}>
               <picture className="project__background">
                 <source
-                  srcSet={`../src/assets/img/${project.imageMobile}`}
+                  srcSet={`${project.imageMobile}`}
                   media="(max-width: 576px)"
                 />
-                <img
-                  src={`../src/assets/img/${project.image}`}
-                  alt="Imagen de proyecto"
-                />
+                <img src={`${project.image}`} alt="Imagen de proyecto" />
               </picture>
               <div className="project__blur--hover"></div>
               <div className="project__info">
@@ -56,14 +61,6 @@ function ProyectoIndividual({ projects }) {
                 </span>
                 <h5 className="project__title">{project.title}</h5>
                 <p className="project__textInfo">{project.description}</p>
-                {/* <span
-                  className="project__toolsTitle"
-                  style={{ borderBottom: `solid 2px ${project.typeColor}` }}
-                >
-                  {project.category == 'Diseño Gráfico'
-                    ? 'Herramientas'
-                    : 'Lenguajes'}
-                </span> */}
                 <ul className="project__tools tools">
                   {project.toolsIcons.map((item) => {
                     const IconTool = ({ icon }) => {
@@ -121,37 +118,12 @@ function ProyectoIndividual({ projects }) {
                     );
                   })}
                 </ul>
-                <button className="whiteButton">Más información</button>
-                {/* <div className="project__links">
-                  {project.icons.map((item) => {
-                    Switch para devolver el nombre del icono correctamente (si lo sacaba directamente del JSON, no me saba error porque me lo traía lowercase)
-                    const Icon = ({ icon }) => {
-                      switch (icon) {
-                        case 'ExternalLink':
-                          return (
-                            <RiExternalLinkLine className="project__link" />
-                          );
-                        case 'Behance':
-                          return <BsBehance className="project__link" />;
-                        case 'Github':
-                          return <BsGithub className="project__link" />;
-                        default:
-                          return null;
-                      }
-                    };
-
-                    return (
-                      <a
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        key={item.iconName}
-                      >
-                        <Icon icon={item.iconName} />
-                      </a>
-                    );
-                  })}
-                </div> */}
+                <button
+                  className="whiteButton"
+                  onClick={mostrarComponenteHandler}
+                >
+                  Más información
+                </button>
               </div>
               <img
                 className="project__element"

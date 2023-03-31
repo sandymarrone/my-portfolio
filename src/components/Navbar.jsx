@@ -61,7 +61,20 @@ function Navbar() {
         <button className="menu__close close" onClick={toggleMenu}>
           <BsX className="close__icon" />
         </button>
-        <img className="menu__logo" src={Logoletras} alt="Logo Sandy Marrone" />
+        <a
+          style={{
+            lineHeight: '0px',
+          }}
+          href="#"
+          className="container__menuLogo"
+          onClick={toggleMenu}
+        >
+          <img
+            className="menu__logo"
+            src={Logoletras}
+            alt="Logo Sandy Marrone"
+          />
+        </a>
         <li className="navbar__item">
           <a className="navbar__link" href="#about" onClick={toggleMenu}>
             Sobre mi
