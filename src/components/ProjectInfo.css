@@ -1,4 +1,4 @@
-.ProjectInfo {
+.projectInfo {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -14,21 +14,17 @@
   padding: 2rem 7rem;
 }
 
-/* .ProjectInfo--active {
-  display: flex;
-} */
-
-.ProjectInfo__container {
+.projectInfo__container {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, .9);
   position: relative;
   border-radius: 5px;
   overflow-y: scroll;
-  /* padding: 3rem; */
+  padding: 10rem 4rem 0rem 4rem;
 }
 
 .closePopUp {
@@ -46,8 +42,103 @@
   line-height: 0;
 }
 
-.ProjectInfo__header {
+.projectInfo__header {
   width: 100%;
   height: 20rem;
-  background-color: aqua;
+  /* border: 1px solid #fff; */
+  display: flex;
+  gap: 3rem;
+}
+
+.projectInfo__header > img {
+  height: 100%;
+  flex: 2;
+}
+
+.projectInfo__info {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-tracks: center;
+}
+
+.projectInfo__type {
+  font-size: 1rem;
+  padding: 1px 4px;
+  font-family: var(--secondary-font);
+  margin-top: 1.5rem;
+}
+
+.projectInfo__info h4 {
+  font-size: 4rem;
+  line-height: 3.8rem;
+  margin-top: 1rem;
+}
+
+.projectInfo__info p {
+  margin-bottom: 1.5rem;
+}
+
+.projectInfo__toolsTitle {
+  font-family: var(--secondary-font);
+  font-size: .75rem;
+  margin-bottom: .4rem;
+  /* border-bottom: 1px solid var(--gray); */
+  display: block;
+  width: fit-content;
+  color: var(--gray);
+}
+
+.projectInfo__tools {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.projectInfo__tool {
+  gap: 7px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+.projectInfo__tool span {
+  position: relative;
+  top: 4px;
+  font-weight: 300;
+}
+
+.projectInfo__link {
+  font-size: 1.15rem;
+  width: fit-content;
+  transition: .3s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  border-bottom: solid 1px #fff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.projectInfo__link > span {
+  position: relative;
+  top: 3px;
+}
+
+.projectInfo__linkIcon {
+ color: #fff;
+ width: 1.3rem;
+ height: 1.3rem;
+}
+
+.projectInfo__link:hover .projectInfo__linkIcon {
+  color: var(--gray);
+  transition: .3s;
+}
+
+.projectInfo__link:hover {
+  color: var(--gray);
 }

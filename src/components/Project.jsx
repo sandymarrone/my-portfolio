@@ -4,33 +4,22 @@ import { IoLogoJavascript } from 'react-icons/io';
 import { AiOutlineConsoleSql } from 'react-icons/ai';
 import { FaPhp } from 'react-icons/fa';
 import { DiPhotoshop, DiIllustrator } from 'react-icons/di';
-import {
-  CSSTransition,
-  SwitchTransition,
-  TransitionGroup,
-} from 'react-transition-group';
-import ProjectInfo from './ProjectInfo';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
+// import ProjectInfo from './ProjectInfo';
 
 function ProyectoIndividual({ projects }) {
-  const [mostrarComponente, setMostrarComponente] = useState(false);
+  // const [mostrarComponente, setMostrarComponente] = useState(false);
 
-  const mostrarComponenteHandler = () => {
-    setMostrarComponente(true);
-  };
+  // const mostrarComponenteHandler = () => {
+  //   setMostrarComponente(true);
+  // };
 
-  const cerrarComponenteHandler = () => {
-    setMostrarComponente(false);
-  };
+  // const cerrarComponenteHandler = () => {
+  //   setMostrarComponente(false);
+  // };
 
   return (
     <ul className="projects__grid">
-      {/* <TransitionGroup> */}
-      {mostrarComponente && (
-        // <CSSTransition classNames="fade" timeout={600}>
-        <ProjectInfo onClose={cerrarComponenteHandler} />
-        // </CSSTransition>
-      )}
-      {/* </TransitionGroup> */}
       {projects.map((project) => (
         <SwitchTransition>
           <CSSTransition
@@ -118,12 +107,7 @@ function ProyectoIndividual({ projects }) {
                     );
                   })}
                 </ul>
-                <button
-                  className="whiteButton"
-                  onClick={mostrarComponenteHandler}
-                >
-                  Más información
-                </button>
+                <button className="whiteButton">Más información</button>
               </div>
               <img
                 className="project__element"

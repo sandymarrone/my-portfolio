@@ -1,6 +1,5 @@
 import './About.css';
 import miFoto from '../assets/img/yo.png';
-import { BsDownload } from 'react-icons/bs';
 import { MdDownload } from 'react-icons/md';
 import SectionName from './SectionName';
 
