@@ -100,7 +100,7 @@ const data = [
     tools: ['JavaScript', 'PHP', 'SQL'],
     icons: [
       {
-        iconName: 'ExternalLink',
+        iconName: 'Github',
         link: 'https://www.behance.net/sandymarrone',
       },
     ],

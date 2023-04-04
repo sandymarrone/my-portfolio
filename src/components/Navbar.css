@@ -43,6 +43,7 @@
   cursor: pointer;
   position: relative;
   font-family: 'SF Mono', sans-serif;
+  line-height: 23px;
 }
 
 .navbar__item::after {
@@ -51,7 +52,7 @@
   left: calc(50% - 25px);
   display: block;
   width: 0;
-  height: 2px;
+  height: 1px;
   background: var(--red);
   transition: width .2s;
 }

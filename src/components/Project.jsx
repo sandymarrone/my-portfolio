@@ -73,7 +73,7 @@ function ProyectoIndividual({ projects }) {
                         case 'Sql':
                           return (
                             <AiOutlineConsoleSql
-                              color=""
+                              color="var(--gray)"
                               size="1.2rem"
                               className="project__link"
                             />
@@ -107,7 +107,13 @@ function ProyectoIndividual({ projects }) {
                     );
                   })}
                 </ul>
-                <button className="whiteButton">Más información</button>
+                {project.icons.map((item) => {
+                  return (
+                    <a href={item.link} className="whiteButton">
+                      Ver en {item.iconName}
+                    </a>
+                  );
+                })}
               </div>
               <img
                 className="project__element"

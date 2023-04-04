@@ -3,6 +3,7 @@ import '../components/Navbar.css';
 import Logo from '../assets/img/logo-samcreative.svg';
 import Logoletras from '../assets/img/letras-samcreative.svg';
 import { BsWhatsapp, BsList, BsX } from 'react-icons/bs';
+import { motion } from 'framer-motion';
 
 function Navbar() {
   const [active, setActive] = useState(false);
@@ -42,22 +43,79 @@ function Navbar() {
     }
   }, [lastScrollY]);
 
+  const navAnimation = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+        ease: 'easeInOut',
+        duration: 2,
+      },
+    },
+  };
+
+  const navItem = {
+    hidden: { opacity: 0, y: '-20px' },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: 'easeInOut',
+      },
+    },
+  };
+
+  const navButton = {
+    hidden: { opacity: 0, y: '-10px' },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: 'easeInOut',
+        delay: 1.2,
+        duration: 0.2,
+      },
+    },
+  };
+
+  const navLogo = {
+    hidden: { opacity: 0, y: '-10px' },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: 'easeInOut',
+        // delay: 1.2,
+        duration: 0.2,
+      },
+    },
+  };
+
   return (
     <nav
       className={`navbar ${
         ubicacionNav ? 'navbar--hide' : navbar ? 'navbar--active' : ''
       }`}
     >
-      <a
+      <motion.a
         style={{
           lineHeight: '0px',
         }}
         href="#"
+        variants={navLogo}
+        initial="hidden"
+        animate="show"
       >
         <img className="navbar__logo" src={Logo} alt="Logo Sandy Marrone" />
-      </a>
+      </motion.a>
 
-      <ul className={`navbar__menu menu ${active ? 'menu__active' : ''}`}>
+      <motion.ul
+        className={`navbar__menu menu ${active ? 'menu__active' : ''}`}
+        variants={navAnimation}
+        initial="hidden"
+        animate="show"
+      >
         <button className="menu__close close" onClick={toggleMenu}>
           <BsX className="close__icon" />
         </button>
@@ -75,26 +133,31 @@ function Navbar() {
             alt="Logo Sandy Marrone"
           />
         </a>
-        <li className="navbar__item">
+        <motion.li className="navbar__item" variants={navItem}>
           <a className="navbar__link" href="#about" onClick={toggleMenu}>
             Sobre mi
           </a>
-        </li>
-        <li className="navbar__item">
+        </motion.li>
+        <motion.li className="navbar__item" variants={navItem}>
           <a className="navbar__link" href="#projects" onClick={toggleMenu}>
             Proyectos
           </a>
-        </li>
-        <li className="navbar__item">
+        </motion.li>
+        <motion.li className="navbar__item" variants={navItem}>
           <a className="navbar__link" href="#contact" onClick={toggleMenu}>
             Contacto
           </a>
-        </li>
-      </ul>
+        </motion.li>
+      </motion.ul>
 
-      <button className="navbar__navBtn">
+      <motion.button
+        className="navbar__navBtn"
+        variants={navButton}
+        initial="hidden"
+        animate="show"
+      >
         <BsWhatsapp className="navBtn__icon" /> Hablemos
-      </button>
+      </motion.button>
 
       <button className="navbar__menuBtn" onClick={toggleMenu}>
         <BsList />

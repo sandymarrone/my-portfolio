@@ -73,6 +73,7 @@ html {
   gap: 10px;
   overflow: hidden;
   z-index: 1;
+  color: var(--white);
 }
 
 .primaryButton.active {
@@ -120,6 +121,9 @@ html {
   gap: 10px;
   overflow: hidden;
   z-index: 1;
+  text-decoration: none;
+  color: var(--white);
+  font-size: .85rem;
 }
 
 .whiteButton.active {

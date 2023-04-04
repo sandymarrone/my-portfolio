@@ -1,4 +1,4 @@
-.scrollButton {
+/* .scrollButton {
   position: fixed;
   right: 4rem;
   width: 45px;
@@ -37,4 +37,103 @@
 @keyframes scrollButton__icon {
   0% {transform: translateY(-3px);}
   50% {transform: translateY(5px);}
+} */
+
+.link {
+  position: absolute;
+  right: 0;
+  bottom: 7rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px;
+  text-decoration: none;
+  transform: rotate(-90deg) translate3d(-1px, 0, 0);
+}
+.link__arrow {
+  display: inline-flex;
+}
+.link__arrow span {
+  position: relative;
+  width: 14px;
+  height: 2px;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--lightGray);
+  z-index: 2;
+}
+.link__arrow span:nth-child(1) {
+  transform-origin: left bottom;
+  transform: rotate(45deg) translate3d(8px, -10px, 0);
+}
+.link__arrow span:nth-child(2) {
+  transform-origin: left bottom;
+  transform: rotate(-45deg);
+}
+.link__arrow span:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #C3002F;
+}
+.link__line {
+  position: relative;
+  margin-left: -14px;
+  margin-right: 20px;
+  width: 100px;
+  height: 2px;
+  background: var(--lightGray);
+  overflow: hidden;
+  z-index: 1;
+}
+.link__line:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 60px;
+  width: 70px;
+  height: 2px;
+  background: var(--red);
+}
+.link__text {
+  color: var(--lightGray);
+  font-size: 22px;
+  transition: .3s ease-in-out;
+  font-weight: 300;
+}
+.link:hover .link__line:after {
+  animation: animation-line .3s forwards;
+}
+.link:hover .link__arrow span:after {
+  animation: animation-arrow .3s forwards;
+  animation-delay: .3s;
+}
+
+.link:hover .link__text {
+  color: var(--white);
+}
+
+@keyframes animation-line {
+  0% {
+    left: 60px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes animation-arrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .link {
+    display: none;
+  }
 }
