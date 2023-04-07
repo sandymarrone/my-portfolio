@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #131313;
 }
 
 .contact__textInfo {
@@ -39,7 +40,7 @@
 .contact__mail {
   color: var(--red);
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   text-decoration: underline;
   font-family: var(--main-font);
   background-color: transparent;
@@ -129,13 +130,13 @@
 }
 
 .form__button {
-  width: 75%;
+  width: 50%;
   margin: 0 auto;
   position: relative;
   font-family: var(--secondary-font);
   padding: 12px 12px;
   cursor: pointer;
-  border: solid 1px var(--white);
+  border: solid 1px var(--lightGray);
   border-radius: 0px;
   background-color: transparent;
   transition: var(--longTransition);

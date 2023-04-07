@@ -1,29 +1,7 @@
-import { useState } from 'react';
-import { BsChevronUp } from 'react-icons/bs';
-import { FiChevronUp } from 'react-icons/fi';
 import './ScrollButton.css';
 import { motion } from 'framer-motion';
 
 function ScrollButton() {
-  // const [visible, setVisible] = useState(false);
-
-  // const toggleVisible = () => {
-  //   const scrolled = document.documentElement.scrollTop;
-  //   if (scrolled <= 500) {
-  //     setVisible(false);
-  //   } else if (scrolled > 500) {
-  //     setVisible(true);
-  //   }
-  // };
-
-  // const scrollToTop = () => {
-  //   window.scrollTo({
-  //     top: 0,
-  //   });
-  // };
-
-  // window.addEventListener('scroll', toggleVisible);
-
   const scrollButton = {
     hidden: { y: 50, opacity: 0, rotate: -90 },
     show: {
@@ -35,12 +13,6 @@ function ScrollButton() {
 
   return (
     <>
-      {/* <button
-        className={visible ? 'scrollButton active' : 'scrollButton'}
-        onClick={scrollToTop}
-      >
-        <FiChevronUp className="scrollButton__icon" />
-      </button> */}
       <motion.a
         class="link"
         href="#about"

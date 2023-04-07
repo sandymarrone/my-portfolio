@@ -34,11 +34,6 @@
 }
 
 @media screen and (max-width: 900px) {
-  .titleSection {
-    font-size: 3.5rem !important;
-    line-height: 3.1rem;
-  }
-
   .subTitle {
     margin-bottom: .8rem !important;
     font-size: 1rem !important;

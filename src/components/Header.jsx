@@ -1,6 +1,5 @@
 import './Header.css';
-// import miFoto from '../assets/img/pp.jpg';
-import miFoto from '../assets/img/yo2.png';
+import miFoto from '../assets/img/foto-sandy-marrone.webp';
 import ScrollButton from './ScrollButton';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { BsGithub } from 'react-icons/bs';
@@ -12,7 +11,7 @@ function Header() {
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, delay: 0.4 },
+      transition: { duration: 0.8, delay: 1.8 },
     },
   };
 
@@ -51,7 +50,7 @@ function Header() {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: { duration: 1, delay: 1.8 },
+      transition: { duration: 1, delay: 2 },
     },
   };
 
@@ -62,6 +61,7 @@ function Header() {
       transition: { duration: 0.2, delay: 0 },
     },
   };
+
   return (
     <header className="header">
       <div className="header__content">

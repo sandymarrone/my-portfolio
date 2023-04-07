@@ -39,6 +39,7 @@
   display: none;
   transition: all .5s linear;
   white-space: pre;
+  color: var(--white);
 }
 
 .scrollButtonFooter:hover > .scrollButtonFooter__text {

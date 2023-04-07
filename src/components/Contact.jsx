@@ -41,13 +41,10 @@ export default function Contact() {
 
   return (
     <section className="contact" id="contact">
-      <SectionName title={'Contacto'} number={'3'} />
+      {/* <SectionName title={'Contacto'} number={'3'} /> */}
 
       <p className="contact__subTitle subTitle">¿Te interesa mi trabajo?</p>
-      <h3
-        className="contact__titleSection titleSection"
-        style={{ marginBottom: '0' }}
-      >
+      <h3 className="contact__titleSection titleSection">
         Construyamos algo{' '}
         <span className="titleSection__outline outline">juntos</span>
       </h3>
@@ -107,30 +104,6 @@ export default function Contact() {
             </label>
           </div>
 
-          {/* <div className="form__inputGroup inputGroup">
-            <label className="form__label">
-              Empresa (opcional)
-              <input className="form__input" {...register('companyName')} />
-              <span className="form__input--border"></span>
-            </label>
-
-            <label className="form__label">
-              ¿Cómo llegaste acá? (opcional)
-              <select
-                className="form__input form__input--select"
-                {...register('discover')}
-              >
-                <option value="">Selecionar...</option>
-                <option value="Buscador">Buscador</option>
-                <option value="Redes sociales">Redes sociales</option>
-                <option value="Recomendación">Recomendación</option>
-                <option value="Otro">Otro</option>
-              </select>
-              <i></i>
-              <span className="form__input--border"></span>
-            </label>
-          </div> */}
-
           <label className="form__label">
             ¿En qué te puedo ayudar?
             <textarea
@@ -151,23 +124,6 @@ export default function Contact() {
           </button>
         </form>
       </div>
-
-      {/* <div className="contact__extraInfo extraInfo">
-        <div className="extraInfo__phoneNumber extraInfo__container">
-          <RiWhatsappFill size={40} />
-          <div className="extraInfo__container_info">
-            <p>0412-8684096</p>
-            <a href="#">Enviar mensaje</a>
-          </div>
-        </div>
-        <div className="extraInfo__address extraInfo__container">
-          <RiMapPin5Fill size={40} />
-          <div className="extraInfo__container_info">
-            <p>Venezuela, Edo. Anzoátegui, El Tigre.</p>
-            <a href="#">Abrir mapa</a>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 }

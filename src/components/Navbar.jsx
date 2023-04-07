@@ -48,9 +48,10 @@ function Navbar() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.4,
-        ease: 'easeInOut',
-        duration: 2,
+        staggerChildren: 0.6,
+        ease: 'easeOut',
+        duration: 1,
+        delay: 0.5,
       },
     },
   };
@@ -61,7 +62,8 @@ function Navbar() {
       opacity: 1,
       y: 0,
       transition: {
-        ease: 'easeInOut',
+        // ease: 'easeOut',
+        // delay: 1,
       },
     },
   };
@@ -86,7 +88,20 @@ function Navbar() {
       y: 0,
       transition: {
         ease: 'easeInOut',
-        // delay: 1.2,
+        delay: 0.2,
+        duration: 0.2,
+      },
+    },
+  };
+
+  const navResponsiveButton = {
+    hidden: { opacity: 0, y: '-10px' },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: 'easeInOut',
+        delay: 0.5,
         duration: 0.2,
       },
     },
@@ -159,9 +174,15 @@ function Navbar() {
         <BsWhatsapp className="navBtn__icon" /> Hablemos
       </motion.button>
 
-      <button className="navbar__menuBtn" onClick={toggleMenu}>
-        <BsList />
-      </button>
+      <motion.button
+        className="navbar__menuBtn"
+        onClick={toggleMenu}
+        variants={navResponsiveButton}
+        initial="hidden"
+        animate="show"
+      >
+        <BsList className="navbar__responsiveMenuIcon" />
+      </motion.button>
     </nav>
   );
 }

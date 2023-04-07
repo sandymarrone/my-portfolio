@@ -33,7 +33,7 @@ function Projects() {
 
   return (
     <section className="projects" id="projects">
-      <SectionName title={'Proyectos'} number={'2'} />
+      {/* <SectionName title={'Proyectos'} number={'2'} /> */}
 
       <p className="subTitle">Échale un vistazo a mis</p>
       <h3 className="titleSection" style={{ marginBottom: '2.5rem' }}>

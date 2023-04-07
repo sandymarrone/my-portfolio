@@ -24,7 +24,7 @@ function Footer() {
 
         <div className="footer__icons">
           <a
-            href="#"
+            href="https://instagram.com/creativesamc"
             className="footer__link"
             target="_blank"
             rel="noopener noreferrer"
@@ -51,7 +51,7 @@ function Footer() {
             <BsBehance className="footer__icon" />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/sandymarrone/"
             className="footer__link"
             target="_blank"
             rel="noopener noreferrer"
